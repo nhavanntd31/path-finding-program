@@ -1,3 +1,4 @@
+
 To run and compile this project, you need to add graphics.h library to compiler.
 
 Our recommended compiling environment is MingW or TDM-GCC-32, the download link for MingW is https://sourceforge.net/projects/mingw/files/latest/download, for TDM-GCC-32 : https://jmeubank.github.io/tdm-gcc/
@@ -34,7 +35,7 @@ path might be ("C:\MinGW\lib")
 
 Next step open project folder again, choose "Open with Code"
 
-Check if ".vscode" already exist, you need else create one.
+Check if ".vscode" already exist, else you need to create one.
 
 It must be include three file : 
 "c_cpp_properties.json" : https://pastebin.com/UTRjGt33
@@ -45,7 +46,9 @@ Note : You should check value of these key : "command", "detail" with your corre
 
 And "launch.json" : https://pastebin.com/bsR4S2px
 The final step, install "Code Runner" extension (if you haven't installed)
-Now, everything is completely done. On the 'File explorer' side, select 'Home' -> 'src' -> 'main.cpp' and press F5
+Now, everything is completely done. On the 'File explorer' side, select 'Home' -> 'src' -> 'main.cpp' and press F5 and a new program "mappingprogram.exe" will be built in //Home/Build folder
+
+Just run "mappingprogram.exe"and two windows will appear, console windows for perform operation and another one will visualization your action.
 
 To use our sample map. Copy from "test.txt" and paste into console menu.
 
