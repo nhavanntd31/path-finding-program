@@ -37,78 +37,13 @@ Next step open project folder again, choose "Open with Code"
 Check if ".vscode" already exist, you need else create one.
 
 It must be include three file : 
-"c_cpp_properties.json" : 
-{
-    "configurations": [
-        {
-            "name": "Win32",
-            "includePath": [
-                "${workspaceFolder}/**",
-                "C:/MinGW/include"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "compilerPath": "C:\\MinGW\\bin\\g++"
-        }
-    ],
-    "version": 4
-}
+"c_cpp_properties.json" : https://pastebin.com/UTRjGt33
 Note : You should check value of these key : "includePath", "compilerPath" with your correct path of your compiler 
 
-And "tasks.json" :
-{
-    "version": "2.0.0",
-    "tasks": [
-      {
-        "type": "process",
-        "label": "C/C++: Build .exe",
-        "command": "C:\\MinGW\\bin\\g++.exe",
-        "args": ["-g",
-                 "${workspaceFolder}\\Home\\src\\main.cpp",
-                 "-o", 
-                 "${workspaceFolder}\\Home\\build\\mappingprogram.exe",
-                 "-lbgi",
-                 "-lgdi32",
-                 "-lcomdlg32",
-                 "-luuid",
-                 "-loleaut32",
-                 "-lole32"
-                ],
-        "options": {
-          "cwd": "${workspaceFolder}"
-        },
-        "problemMatcher": [],
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        },
-        "detail": "compiler: C:\\MinGW\\bin\\g++.exe"
-      }
-    ]
-  }
+And "tasks.json" : https://pastebin.com/fSvdg3L6
 Note : You should check value of these key : "command", "detail" with your correct path of your compiler 
 
-And "launch.json" :
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "C/C++: Build .exe",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}\\Home\\build\\mappingprogram.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "console": "externalTerminal"
-        }
-    ]
-}
-
+And "launch.json" : https://pastebin.com/bsR4S2px
 The final step, install "Code Runner" extension (if you haven't installed)
 Now, everything is completely done. On the 'File explorer' side, select 'Home' -> 'src' -> 'main.cpp' and press F5
 
