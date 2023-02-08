@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++: Build .exe",
+            "type": "cppvsdbg",
+            "preLaunchTask": "C/C++: Build .exe",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Home\\build\\mappingprogram.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "externalTerminal"
+        }
+    ]
+}

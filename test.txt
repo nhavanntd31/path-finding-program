@@ -1,0 +1,171 @@
+1
+200 200
+NEU
+1
+400 300
+LTN Crossroad
+1
+300 450
+BK Stadium
+1
+600 400
+HUCE
+1
+800 600
+HUST
+1
+600 200
+BM Hospital
+1
+500 600
+TQB Zone
+1
+800 400
+PRB Gate
+1
+400 100
+Vong Crossroads
+1
+800 200
+TN Park
+1
+300 650
+HL Coffee
+1
+100 400
+Gieng Mut
+1
+100 100
+DL Market
+1
+700 100
+VP Hospital
+1
+80 650
+BND Street
+1
+500 500
+CircleK1
+2
+1
+DL Market
+NEU
+TDN1
+200
+1
+NEU
+LTN Crossroad
+TDN2
+400
+1
+LTN Crossroad
+HUCE
+TDN3
+500
+1
+HUCE
+HUST
+TDN4
+700
+2
+DL Market
+Vong Crossroads
+Dai La
+500
+2
+Vong Crossroads
+BM Hospital
+GP1
+600
+2
+BM Hospital
+PRB Gate
+GP2
+700
+1
+PRB Gate
+HUST
+Way1
+500
+2
+LTN Crossroad
+BM Hospital
+LTN1
+700
+1
+LTN Crossroad
+BK Stadium
+LTN2
+500
+2
+NEU
+Gieng Mut
+Ngo TD
+300
+2
+Gieng Mut
+BK Stadium
+NH
+200
+1
+BK Stadium
+TQB Zone
+TQB1
+800
+1
+HUST
+TQB Zone
+TQB2
+700
+2
+TQB Zone
+HL Coffee
+TQB3
+500
+1
+BK Stadium
+HL Coffee
+TN1
+600
+2
+BK Stadium
+BND Street
+TN2
+800
+2
+BND Street
+HL Coffee
+TN3
+800
+1
+LTN Crossroad
+Vong Crossroads
+Way2
+400
+1
+BK Stadium
+CircleK1
+Way3
+200
+1
+CircleK1
+HUCE
+Way4
+300
+2
+BM Hospital
+VP Hospital
+HM1
+400
+1
+PRB Gate
+TN Park
+DCV1
+600
+1
+TN Park
+VP Hospital
+DCV2
+300
+0
+
