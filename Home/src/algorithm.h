@@ -107,6 +107,7 @@ pair<pair<float,float>,pair<float,float>> getIntersectionCoordinates(Vertex v1, 
     pair<float, float> tam2 = {v2.x, v2.y};
     vector<Point> set1= intersects(tam1,tam2,tam1,radius,false);
     vector<Point> set2= intersects(tam1,tam2,tam2,radius,false);
+    // check what is correct point
     float minDistance = min(min(calDistance(set1[0],set2[0]),calDistance(set1[0],set2[1])),min(calDistance(set1[1],set2[0]),calDistance(set1[1],set2[1])));
      if (minDistance == calDistance(set1[0],set2[0]))
     {

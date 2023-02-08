@@ -2,7 +2,7 @@ To run and compile this project, you need to add graphics.h library to compiler.
 
 Our recommended compiling environment is MingW or TDM-GCC-32, the download link for MingW is https://sourceforge.net/projects/mingw/files/latest/download, for TDM-GCC-32 : https://jmeubank.github.io/tdm-gcc/
 
-For example, we will use MingW and Visual Studio Code edior. Now open minGW’s downloaded setup then click on Install and choose your directory where the software should be installed and click on continue.
+For example, we will use MingW and Visual Studio Code editor. Now open MingW 's downloaded setup then click on Install and choose your directory where the software should be installed and click on continue.
 
 After installing, you will see an image like below now you have to right click on highlighted (“mingw-32-base”, “mingw32-gcc-g++” and “mysys-base”) box and choose mark for installation.
 

@@ -8,7 +8,6 @@ private:
 public:
     void AddPlace()
     {
-        int a;
         int x, y;
         string name;
         system("cls");

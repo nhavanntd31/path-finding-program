@@ -14,17 +14,16 @@ public:
     Graph()
     {
         numberofVertex = 0;
-        initwindow(900, 700, "Visualization"); // khởi tạo cửa sổ
-        setbkcolor(WHITE);                     // set backgroundcolor là white
+        initwindow(900, 700, "Visualization"); 
+        setbkcolor(WHITE);                     
         cleardevice();
         setcolor(BLACK);
-        // settextstyle(0,0,2); 
         drawxyAxis();   
     }
     ~Graph() = default;
     void addVertex(int x, int y, string placeName)
-    { // đỉnh: tọa độ x, y, tên điểm
-        // Thêm vertex đấy vào trong vector để lưu
+    { 
+        
         numberofVertex++;
         Vertex temp = {x, y, placeName};
         vList.push_back(temp);
@@ -33,33 +32,25 @@ public:
     }
     void addOneWayEdge(string name1, string name2, string streetName, string cost)
     {
-        // đường 1 chiều: điểm đầu, điểm cuối, tên đường, khoảng cách
-        //    Thêm đường đấy vào trong danh sách kề array adj.
         int intCost = stoi(cost);
         int index1 = getVertex(name1);
         int index2 = getVertex(name2);  
-        //    adj[index1] : là 1 cái vector chứa các thông tin của các đỉnh kề với đỉnh index1  dưới dạng {index của đỉnh,{khoảng cách, tên đường}};
         adj[index1].push_back({index2, {intCost, streetName}});
-        //    Vẽ lên màn hình
         drawOneWayEdge(vList[index1], vList[index2], stringToChars(streetName), stringToChars(cost));
     
     }
     void addTwoWayEdge(string name1, string name2, string streetName, string cost)
     {
-        // đường 2 chiều: điểm đầu, điểm cuối, tên đường, khoảng cách
         int intCost = stoi(cost);
         int index1 = getVertex(name1);
         int index2 = getVertex(name2);
-         //    adj[index1] : là 1 cái vector chứa các thông tin của các đỉnh kề với đỉnh index1  dưới dạng {index của đỉnh,{khoảng cách, tên đường}};
         adj[index1].push_back({index2, {intCost, streetName}});
         adj[index2].push_back({index1, {intCost, streetName}});
-        //    Vẽ lên màn hình
         drawTwoWayEdge(vList[index1], vList[index2], stringToChars(streetName), stringToChars(cost));
         
     }
     void removeEdge(string streetName)
     {
-        // xóa 1 đường : xóa trong danh sách kề : tốt nhất là xóa theo kiểu đường 2 chiều
         pair<int,int> info = getEdge(streetName);
         for (int i = 0;i < adj[info.first].size();i++){
             if (adj[info.first].at(i).first == info.second ) adj[info.first].erase(adj[info.first].begin()+i);
@@ -67,14 +58,12 @@ public:
         for (int i = 0;i < adj[info.second].size();i++){
             if (adj[info.second].at(i).first == info.first ) adj[info.second].erase(adj[info.first].begin()+i);
         }
-        // xóa trên màn hìn
         deleteOneWayEdge(vList[info.first],vList[info.second]);
         outtextxy(vList[info.first].x-4-radius,vList[info.first].y+10+radius+3, stringToChars(vList[info.first].name));
         outtextxy(vList[info.second].x-4-radius,vList[info.second].y+10+radius+3, stringToChars(vList[info.second].name));
     }
     void removeVertex(string placeName)
     {
-        // xóa 1 đỉnh : xóa hết các đỉnh trong vector kề của đỉnh này trong list, xóa hết đỉnh này ở mọi vector kề khác
         int index = getVertex(placeName);
         while( !adj[index].empty() ) 
         {
@@ -102,7 +91,6 @@ public:
             adj[i].clear();
         }
         while (!vList.empty()) vList.pop_back();
-        // xóa hết màn hình , vẽ lại trục tọa độ
         cleardevice();
         drawxyAxis();
         numberofVertex = 0;
