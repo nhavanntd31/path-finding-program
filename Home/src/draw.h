@@ -61,10 +61,14 @@ void drawTwoWayEdge(Vertex v1, Vertex v2,char* name, char* cost ){
     outtextxy(v2.x-4-radius,v2.y+10+radius+3, stringToChars(v2.name));
 }
 void deleteVertex(Vertex v1){
-    setlinestyle(0,0,2);
     setcolor(WHITE);
+    setlinestyle(0,0,2);
     circle(v1.x+10,v1.y+10,radius);
-    outtextxy(v1.x-4-radius,v1.y+10+radius+2, "           ");
+    setlinestyle(0,0,1);
+    circle(v1.x+10,v1.y+10,radius);
+    setlinestyle(0,0,3);
+    circle(v1.x+10,v1.y+10,radius);
+    outtextxy(v1.x-4-radius,v1.y+10+radius+2, "                  ");
 }
 void deleteTwoWayEdge(Vertex v1,Vertex v2){
     setcolor(WHITE);
@@ -95,11 +99,12 @@ void deleteOneWayEdge(Vertex v1, Vertex v2){
     pair<int,int> aPoint2 = aCor.second;
     line(ePoint.first+10,ePoint.second+10,aPoint1.first+10,aPoint1.second+10);
     line(ePoint.first+10,ePoint.second+10,aPoint2.first+10,aPoint2.second+10);
-    outtextxy((v1.x+v2.x)/2+10,(v1.y+v2.y)/2-11, "           ");
-    outtextxy((v1.x+v2.x)/2+10,(v1.y+v2.y)/2-10, "           ");
-    outtextxy((v1.x+v2.x)/2+10,(v1.y+v2.y)/2-9,  "           ");
-    outtextxy((v1.x+v2.x)/2-20,(v1.y+v2.y)/2+20, "           ");
-    setlinestyle(0,0,2);
+    outtextxy((v1.x+v2.x)/2+10,(v1.y+v2.y)/2-11, "             ");
+    outtextxy((v1.x+v2.x)/2+10,(v1.y+v2.y)/2-10, "             ");
+    outtextxy((v1.x+v2.x)/2+10,(v1.y+v2.y)/2-9,  "             ");
+    outtextxy((v1.x+v2.x)/2+10,(v1.y+v2.y)/2-8,  "             ");
+    outtextxy((v1.x+v2.x)/2+10,(v1.y+v2.y)/2-7,  "             ");
+    outtextxy((v1.x+v2.x)/2-20,(v1.y+v2.y)/2+20, "             ");
     setcolor(BLACK);
     circle(v1.x+10,v1.y+10,radius);
     circle(v2.x+10,v2.y+10,radius);
@@ -113,7 +118,6 @@ void highlightEdge(Vertex v1, Vertex v2){
     line(sPoint.first+10,sPoint.second+10,ePoint.first+10,ePoint.second+10); 
     setlinestyle(0,0,2);
     setcolor(LIGHTGREEN);
-    setlinestyle(0,0,2);
     circle(v1.x+10,v1.y+10,radius);
     circle(v2.x+10,v2.y+10,radius);
     setlinestyle(0,0,3);

@@ -26,7 +26,7 @@ public:
         numberofVertex++;
         Vertex temp = {x, y, placeName};
         vList.push_back(temp);
-        // B2 : vẽ lên màn hình
+
         drawVertex(x, y, stringToChars(placeName));
     }
     void addOneWayEdge(string name1, string name2, string streetName, string cost)
@@ -51,11 +51,15 @@ public:
     void removeEdge(string streetName)
     {
         pair<int,int> info = getEdge(streetName);
-        for (int i = 0;i < adj[info.first].size();i++){
-            if (adj[info.first].at(i).first == info.second ) adj[info.first].erase(adj[info.first].begin()+i);
+        for (int i = 0;i < adj[info.first].size(); i++){
+            if (adj[info.first][i].first == info.second )
+            { 
+              
+                adj[info.first].erase(adj[info.first].begin()+i);
+            }
         }
-        for (int i = 0;i < adj[info.second].size();i++){
-            if (adj[info.second].at(i).first == info.first ) adj[info.second].erase(adj[info.first].begin()+i);
+        for (int i = 0;i < adj[info.second].size(); i++){
+            if (adj[info.second][i].first == info.first ) adj[info.second].erase(adj[info.second].begin()+i);
         }
         deleteOneWayEdge(vList[info.first],vList[info.second]);
         outtextxy(vList[info.first].x-4-radius,vList[info.first].y+10+radius+3, stringToChars(vList[info.first].name));
