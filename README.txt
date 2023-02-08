@@ -1,3 +1,4 @@
+NOTE THAT : //Home//Build//"mappingprogram.exe" is not ready to run.
 
 To run and compile this project, you need to add graphics.h library to compiler.
 
@@ -52,5 +53,5 @@ Just run "mappingprogram.exe"and two windows will appear, console windows for pe
 
 To use our sample map. Copy from "test.txt" and paste into console menu.
 
-
+Github repo : https://github.com/nhavanntd31/path-finding-program
 
